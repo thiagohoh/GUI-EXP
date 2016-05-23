@@ -1,0 +1,44 @@
+import javax.swing.*;
+
+/**
+ * Created by a1647881 on 16/05/16.
+ */
+public class xotaPanel extends JFrame {
+
+
+    private JPanel panel1;
+    private JLabel opa;
+    public JProgressBar progressBar1;
+    private JList lixta;
+    private JScrollPane scrou;
+
+    public xotaPanel (){
+        setLayout(null);
+        add(panel1);
+        setSize(800, 600);
+        lixta = new JList();
+        scrou = new JScrollPane(lixta);
+
+        add(opa);
+        opa.setSize(250,250);
+        opa.setLocation(263,240);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        add(progressBar1);
+        progressBar1.setLocation(263,489);
+        progressBar1.setSize(251,23);
+
+        add(scrou);
+        scrou.setLocation(580,25);
+        scrou.setSize(200,499);
+
+
+    }
+
+
+
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
+}
