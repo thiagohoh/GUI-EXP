@@ -12,6 +12,7 @@ public class main {
 
             p.progressBar1.setValue(j);
             p.progressBar1.setString("veremos"+j+"%");
+            p.cred.setLocation(j,520);
 
             //p.progressBar1.setVisible(j % 2 == 0 );
             if(j==302){
