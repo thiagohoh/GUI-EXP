@@ -1,0 +1,43 @@
+/**
+ * Created by a1647881 on 16/05/16.
+ */
+public class main {
+    public static void main(String[] args) {
+
+        xotaPanel p = new xotaPanel();
+
+        p.setVisible(true);
+
+        for(int j = 15; j < 303;j++){
+
+            p.progressBar1.setValue(j);
+            p.progressBar1.setString("veremos"+j+"%");
+
+            //p.progressBar1.setVisible(j % 2 == 0 );
+            if(j==302){
+              //  p.progressBar1.setVisible(false);
+                for( j = 302; j > 15;j--) {
+                    p.progressBar1.setValue(j);
+                    p.progressBar1.setString("veremos" + j + "%");
+
+                  //  p.progressBar1.setVisible(j % 2 == 0);
+                    try{ Thread.sleep(200);
+
+                    }catch (Exception ea){
+
+                    }
+
+                }
+            }
+            try{ Thread.sleep(200);
+
+            }catch (Exception ea){
+
+            }
+        }
+
+    }
+
+
+
+}
