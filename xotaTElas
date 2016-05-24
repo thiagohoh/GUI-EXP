@@ -11,26 +11,60 @@ public class xotaPanel extends JFrame {
     public JProgressBar progressBar1;
     private JList lixta;
     private JScrollPane scrou;
+    private JList LixtaTuite;
+    private JScrollPane tuiteScrou;
+    private JList Status;
+    private JScrollPane StatusScrou;
+    public JLabel cred;
+   public JaumCrasse opa2;
+
 
     public xotaPanel (){
         setLayout(null);
         add(panel1);
+        opa2 = new JaumCrasse();
         setSize(800, 600);
         lixta = new JList();
+        LixtaTuite = new JList();
+        Status = new JList();
         scrou = new JScrollPane(lixta);
+        tuiteScrou = new JScrollPane(LixtaTuite);
+        StatusScrou = new JScrollPane(Status);
+        cred = new JLabel();
+        setResizable(false);
 
-        add(opa);
-        opa.setSize(250,250);
-        opa.setLocation(263,240);
+
+        add(opa2);
+        opa2.setSize(250,250);
+        opa2.setLocation(164,50);
+
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
         add(progressBar1);
-        progressBar1.setLocation(263,489);
+        progressBar1.setLocation(164,236);
         progressBar1.setSize(251,23);
 
         add(scrou);
-        scrou.setLocation(580,25);
+        scrou.setLocation(590,25);
         scrou.setSize(200,499);
+        lixta.setToolTipText("botos");
+
+        add(tuiteScrou);
+        tuiteScrou.setLocation(10,324);
+        tuiteScrou.setSize(280,200);
+        LixtaTuite.setToolTipText("lasti tuiteres");
+
+        add(StatusScrou);
+        StatusScrou.setLocation(300, 324);
+        StatusScrou.setSize(280, 200);
+        Status.setToolTipText("Xttatus");
+
+        add(cred);
+        cred.setLocation(239,520);
+        cred.setSize(500,60);
+        cred.setText("MADE BY - LITTLE JAO- JILHERME && PANTENE");
+
 
 
     }
