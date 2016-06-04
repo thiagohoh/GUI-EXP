@@ -14,8 +14,13 @@ public class Test extends JFrame{
     private JLabel back = new JLabel(new ImageIcon("C:\\Users\\Thiago\\JASr\\wallhaven-367832.png"));
     private JButton button1 = new JButton("OK");
     private JButton cancel = new JButton("Cancel");
-    private JTextField loginT = new JTextField();
-    private JPasswordField passvord = new JPasswordField();
+    private JTextField loginT = new JTextField("Login");
+    private JPasswordField passvord = new JPasswordField("passaword");
+    private JLabel login = new JLabel("LOGIN");
+    private JLabel senha = new JLabel("PASSWORD");
+    private JLabel tuite = new JLabel("Last Twitts");
+    private  JLabel status = new JLabel("Status");
+
 
     private BufferedImage backlist;
     private JList lixta1 = new JList();
@@ -31,13 +36,17 @@ public class Test extends JFrame{
     public Test(){
 
 
-        super("Login");
+        super("My Personal Stump");
         try{
             backlist = ImageIO.read(new File("C:\\Users\\Thiago\\JASr\\lixta.jpg"));
 
         }catch (Exception e){
             e.printStackTrace();
         }
+        add(status);
+        add(tuite);
+        add(senha);
+        add(login);
         add(cred);
         add(scroll1);
         add(tuitescroll);
@@ -49,6 +58,10 @@ public class Test extends JFrame{
         add(loginT);
         add(button1);
         add(back);
+
+        login.setSize(200,70);
+        login.setLocation(200,140);
+        login.setToolTipText(" Login");
 
         loginT.setSize(200,30);
         loginT.setLocation(300,160);
@@ -64,6 +77,11 @@ public class Test extends JFrame{
         cancel.setLocation(520,220);
         cancel.setToolTipText("cancel");
 
+
+        senha.setSize(100,30);
+        senha.setLocation(200,220);
+        senha.setToolTipText("Password");
+
         passvord.setSize(200,30);
         passvord.setLocation(300,220);
         passvord.setToolTipText("password");
@@ -75,12 +93,14 @@ public class Test extends JFrame{
         tuitescroll.setLocation(450,400);
         tuitescroll.setSize(300,250);
         listTuite.setToolTipText("Last Tuites");
-
+        tuite.setSize(100,80);
+        tuite.setLocation(560,370);
 
         statusScroll.setLocation(80,400);
         statusScroll.setSize(300,250);
         listStatus.setToolTipText("Status");
-
+        status.setLocation(200,370);
+        status.setSize(100,80);
 
 
         cred.setLocation(350,1);
